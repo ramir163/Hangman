@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--StartController-->
@@ -16,9 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-cw-9VY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-cw-9VY">
                                 <rect key="frame" x="175" y="275" width="250" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1Uw-pL-f7c"/>
+                                    <constraint firstAttribute="width" secondItem="nXn-cw-9VY" secondAttribute="height" multiplier="5:1" id="J6t-Jn-GRg"/>
+                                    <constraint firstAttribute="height" constant="50" id="mfz-Yt-r0o"/>
+                                </constraints>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,12 +33,38 @@
                                     <segue destination="Zyq-ct-qug" kind="show" id="sQg-HN-Uv9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Hangman, press new game to start playing." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbM-uG-0nI">
+                                <rect key="frame" x="175" y="150" width="250" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ty3-6o-aE9"/>
+                                    <constraint firstAttribute="width" constant="250" id="qee-Ck-Dxj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJK-0r-HCx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1hQ-JH-WG2"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="3Jc-yl-iCQ"/>
+                                    <constraint firstAttribute="width" constant="600" id="wPJ-om-73T"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Hangman" id="OxL-gX-hQT"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nXn-cw-9VY" firstAttribute="top" secondItem="PbM-uG-0nI" secondAttribute="bottom" constant="25" id="5Ek-ML-IbV"/>
+                            <constraint firstAttribute="centerX" secondItem="PbM-uG-0nI" secondAttribute="centerX" id="Bga-fC-JKW"/>
+                            <constraint firstItem="EJK-0r-HCx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KYS-Vt-sRq"/>
                             <constraint firstAttribute="centerX" secondItem="nXn-cw-9VY" secondAttribute="centerX" id="bnG-GS-mRa"/>
                             <constraint firstAttribute="centerY" secondItem="nXn-cw-9VY" secondAttribute="centerY" id="fa7-tu-pLL"/>
+                            <constraint firstAttribute="centerX" secondItem="EJK-0r-HCx" secondAttribute="centerX" id="oIq-lQ-1ee"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -52,30 +84,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Word to Guess" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Word to Guess" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
                                 <rect key="frame" x="175" y="285" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Bq-hZ-NUf"/>
+                                    <constraint firstAttribute="width" constant="250" id="ijQ-EJ-JOe"/>
+                                    <constraint firstAttribute="width" secondItem="Y4o-qU-ydG" secondAttribute="height" multiplier="25:3" id="lHX-Yd-roW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
+                                    <outlet property="delegate" destination="Zyq-ct-qug" id="C65-hG-Tut"/>
                                     <segue destination="2eC-BL-M74" kind="show" id="KfM-72-6bj"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-Cr-EbM">
-                                <rect key="frame" x="175" y="392" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-Cr-EbM">
+                                <rect key="frame" x="175" y="340" width="250" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="I8e-Wd-uyT"/>
+                                    <constraint firstAttribute="height" constant="50" id="bJ4-dW-LWC"/>
+                                </constraints>
                                 <state key="normal" title="Start Game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2eC-BL-M74" kind="show" id="5sC-kQ-UZZ"/>
+                                    <segue destination="2eC-BL-M74" kind="show" id="YFe-nx-5d8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Y4o-qU-ydG" secondAttribute="centerY" id="2Vt-rU-CBl"/>
+                            <constraint firstItem="zzc-Cr-EbM" firstAttribute="top" secondItem="Y4o-qU-ydG" secondAttribute="bottom" constant="25" id="7tT-6d-qFd"/>
+                            <constraint firstAttribute="centerX" secondItem="zzc-Cr-EbM" secondAttribute="centerX" id="P23-So-NtK"/>
                             <constraint firstAttribute="centerX" secondItem="Y4o-qU-ydG" secondAttribute="centerX" id="d4x-hZ-hAe"/>
-                            <constraint firstAttribute="centerX" secondItem="zzc-Cr-EbM" secondAttribute="centerX" id="tmB-Oo-Nos"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -95,28 +138,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-jg-TAU">
-                                <rect key="frame" x="175" y="275" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ej-o4-BUU">
+                                <rect key="frame" x="175" y="400" width="250" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ScD-TG-L2T"/>
+                                    <constraint firstAttribute="width" constant="250" id="UoL-Bw-kJs"/>
+                                </constraints>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zyq-ct-qug" kind="show" id="zPd-PN-QXp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Ohh-jg-TAU" secondAttribute="centerX" id="8ed-Lt-mQd"/>
-                            <constraint firstAttribute="centerY" secondItem="Ohh-jg-TAU" secondAttribute="centerY" id="s1E-mn-RPI"/>
+                            <constraint firstItem="vop-Fu-jkr" firstAttribute="top" secondItem="7ej-o4-BUU" secondAttribute="bottom" constant="150" id="TfI-FR-bQK"/>
+                            <constraint firstAttribute="centerX" secondItem="7ej-o4-BUU" secondAttribute="centerX" id="fVr-1u-Wmu"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG6-UG-Wrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="86"/>
+            <point key="canvasLocation" x="1420" y="86"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="sQg-HN-Uv9"/>
         <segue reference="KfM-72-6bj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
