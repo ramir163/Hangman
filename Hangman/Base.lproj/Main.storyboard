@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-282" y="757"/>
+            <point key="canvasLocation" x="-378" y="1149.75"/>
         </scene>
         <!--NewGame-->
         <scene sceneID="Kea-dV-wTt">
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQT-Po-ujb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="14"/>
+            <point key="canvasLocation" x="346" y="79.5"/>
         </scene>
         <!--Game-->
         <scene sceneID="Ivv-Bi-5Pb">
@@ -247,7 +247,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Hangman Game" id="dZy-fi-kia">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="YYq-zI-sOi">
+                                        <barButtonItem key="rightBarButtonItem" title="Quit" id="YYq-zI-sOi">
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="vXZ-lx-hvc" kind="show" id="7Mf-Dh-1o5"/>
@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG6-UG-Wrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="757"/>
+            <point key="canvasLocation" x="1174" y="432.75"/>
         </scene>
     </scenes>
     <resources>
