@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-cw-9VY">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="New Game 1 Player" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-cw-9VY">
                                 <rect key="frame" x="175" y="275" width="250" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="1Uw-pL-f7c"/>
                                     <constraint firstAttribute="height" constant="50" id="mfz-Yt-r0o"/>
                                 </constraints>
-                                <state key="normal" title="New Game for 1 Player">
+                                <state key="normal" title="1 Player">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Qrx-yb-a95"/>
                                     <constraint firstAttribute="width" constant="250" id="Ttg-iO-033"/>
                                 </constraints>
-                                <state key="normal" title="New Game for 2 Players">
+                                <state key="normal" title="2 Players">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -68,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman Logo 120x120" translatesAutoresizingMaskIntoConstraints="NO" id="H0M-Ko-JIA">
-                                <rect key="frame" x="120" y="105" width="120" height="120"/>
+                                <rect key="frame" x="135" y="105" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="QU1-BM-7b4"/>
                                     <constraint firstAttribute="width" constant="120" id="mYc-JS-ho3"/>
@@ -78,7 +78,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PbM-uG-0nI" firstAttribute="leading" secondItem="H0M-Ko-JIA" secondAttribute="trailing" constant="25" id="2tt-TT-9N4"/>
+                            <constraint firstItem="PbM-uG-0nI" firstAttribute="leading" secondItem="H0M-Ko-JIA" secondAttribute="trailing" constant="10" id="2tt-TT-9N4"/>
                             <constraint firstItem="GWh-H7-GD6" firstAttribute="top" secondItem="nXn-cw-9VY" secondAttribute="bottom" constant="25" id="HBt-37-L4q"/>
                             <constraint firstItem="GWh-H7-GD6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="330" id="Ja7-Zw-Zhj"/>
                             <constraint firstItem="EJK-0r-HCx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KYS-Vt-sRq"/>
