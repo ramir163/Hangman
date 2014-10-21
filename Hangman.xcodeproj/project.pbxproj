@@ -11,9 +11,9 @@
 		6734901C19F5AE8400A574F1 /* Hangman.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */; };
 		6734901E19F5AE8400A574F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734901D19F5AE8400A574F1 /* ViewController.swift */; };
 		6734902119F5AE8400A574F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6734901F19F5AE8400A574F1 /* Main.storyboard */; };
-		6734902319F5AE8400A574F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6734902219F5AE8400A574F1 /* Images.xcassets */; };
 		6734902619F5AE8400A574F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6734902419F5AE8400A574F1 /* LaunchScreen.xib */; };
 		6734903219F5AE8400A574F1 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734903119F5AE8400A574F1 /* HangmanTests.swift */; };
+		6734903D19F6F6F400A574F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6734903C19F6F6F400A574F1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,11 +33,11 @@
 		6734901B19F5AE8400A574F1 /* Hangman.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangman.xcdatamodel; sourceTree = "<group>"; };
 		6734901D19F5AE8400A574F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6734902019F5AE8400A574F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6734902219F5AE8400A574F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6734902519F5AE8400A574F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6734902B19F5AE8400A574F1 /* HangmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6734903019F5AE8400A574F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6734903119F5AE8400A574F1 /* HangmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
+		6734903C19F6F6F400A574F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +82,9 @@
 				6734901819F5AE8400A574F1 /* AppDelegate.swift */,
 				6734901D19F5AE8400A574F1 /* ViewController.swift */,
 				6734901F19F5AE8400A574F1 /* Main.storyboard */,
-				6734902219F5AE8400A574F1 /* Images.xcassets */,
 				6734902419F5AE8400A574F1 /* LaunchScreen.xib */,
 				6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */,
+				6734903C19F6F6F400A574F1 /* Images.xcassets */,
 				6734901619F5AE8400A574F1 /* Supporting Files */,
 			);
 			path = Hangman;
@@ -195,9 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6734903D19F6F6F400A574F1 /* Images.xcassets in Resources */,
 				6734902119F5AE8400A574F1 /* Main.storyboard in Resources */,
 				6734902619F5AE8400A574F1 /* LaunchScreen.xib in Resources */,
-				6734902319F5AE8400A574F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
