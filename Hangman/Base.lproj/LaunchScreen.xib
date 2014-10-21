@@ -16,23 +16,32 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jL-D3-fiS">
-                    <rect key="frame" x="165" y="215" width="150" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZr-Ju-XFe">
+                    <rect key="frame" x="165" y="45" width="150" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="Mpz-ae-M8d"/>
-                        <constraint firstAttribute="height" constant="50" id="xYq-bb-pGp"/>
+                        <constraint firstAttribute="height" constant="50" id="V5o-fn-617"/>
+                        <constraint firstAttribute="width" constant="150" id="zTu-uy-Yrt"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman Logo 120x120.png" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-qW-Ee3">
+                    <rect key="frame" x="120" y="120" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="0aZ-du-pCo"/>
+                        <constraint firstAttribute="width" constant="240" id="gYj-ou-Tbc"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="3jL-D3-fiS" secondAttribute="centerX" id="BPL-Oc-l3q"/>
-                <constraint firstAttribute="centerY" secondItem="3jL-D3-fiS" secondAttribute="centerY" id="JdT-y4-Yyf"/>
+                <constraint firstAttribute="centerX" secondItem="bZr-Ju-XFe" secondAttribute="centerX" id="7M9-lr-bsi"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
+                <constraint firstAttribute="centerX" secondItem="WHP-qW-Ee3" secondAttribute="centerX" id="TqA-ym-c1m"/>
+                <constraint firstItem="bZr-Ju-XFe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="UzF-AY-Gn3"/>
+                <constraint firstAttribute="centerY" secondItem="WHP-qW-Ee3" secondAttribute="centerY" id="Xxk-TJ-7Wm"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -40,4 +49,7 @@
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="Hangman Logo 120x120.png" width="120" height="120"/>
+    </resources>
 </document>

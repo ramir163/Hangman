@@ -38,6 +38,7 @@
 		6734902B19F5AE8400A574F1 /* HangmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6734903019F5AE8400A574F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6734903119F5AE8400A574F1 /* HangmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
+		6734903B19F6A7CF00A574F1 /* Hangman Logo 120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Hangman Logo 120x120.png"; path = "../../Hangman Logo/Hangman Logo 120x120.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				6734901F19F5AE8400A574F1 /* Main.storyboard */,
 				6734902219F5AE8400A574F1 /* Images.xcassets */,
 				6734902419F5AE8400A574F1 /* LaunchScreen.xib */,
+				6734903B19F6A7CF00A574F1 /* Hangman Logo 120x120.png */,
 				6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */,
 				6734901619F5AE8400A574F1 /* Supporting Files */,
 			);
