@@ -109,7 +109,7 @@
         <!--NewGame-->
         <scene sceneID="Kea-dV-wTt">
             <objects>
-                <viewController title="NewGame" id="Zyq-ct-qug" sceneMemberID="viewController">
+                <viewController title="NewGame" id="Zyq-ct-qug" customClass="NewGameViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vGH-8G-8Xp"/>
                         <viewControllerLayoutGuide type="bottom" id="kEX-1G-YwC"/>
@@ -118,16 +118,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new word here." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
-                                <rect key="frame" x="175" y="239" width="250" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5Bq-hZ-NUf"/>
-                                    <constraint firstAttribute="width" constant="250" id="ijQ-EJ-JOe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-Cr-EbM">
                                 <rect key="frame" x="200" y="294" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +134,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="2eC-BL-M74" kind="show" id="YFe-nx-5d8"/>
+                                    <action selector="clickedButton:" destination="Zyq-ct-qug" eventType="touchUpInside" id="xnp-yl-QZA"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSh-uR-cbp">
@@ -187,6 +177,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new word here." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
+                                <rect key="frame" x="175" y="239" width="250" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Bq-hZ-NUf"/>
+                                    <constraint firstAttribute="width" constant="250" id="ijQ-EJ-JOe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Zyq-ct-qug" id="ac8-tr-aFc"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -204,6 +207,10 @@
                             <constraint firstAttribute="centerX" secondItem="LSh-uR-cbp" secondAttribute="centerX" id="xk3-jN-uxY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="Y4o-qU-ydG" id="oQu-4J-1k1"/>
+                        <segue destination="2eC-BL-M74" kind="show" identifier="New2PlayerGame" id="Ssi-G0-puA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQT-Po-ujb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,8 +288,8 @@
         <image name="Hangman Logo 120x120" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Mf-Dh-1o5"/>
-        <segue reference="YFe-nx-5d8"/>
+        <segue reference="9oH-n2-qqh"/>
+        <segue reference="Ssi-G0-puA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>

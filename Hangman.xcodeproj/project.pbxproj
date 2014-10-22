@@ -14,6 +14,7 @@
 		6734902619F5AE8400A574F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6734902419F5AE8400A574F1 /* LaunchScreen.xib */; };
 		6734903219F5AE8400A574F1 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734903119F5AE8400A574F1 /* HangmanTests.swift */; };
 		6734903D19F6F6F400A574F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6734903C19F6F6F400A574F1 /* Images.xcassets */; };
+		679A611E19F84D0100A261B6 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A611D19F84D0100A261B6 /* NewGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6734903019F5AE8400A574F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6734903119F5AE8400A574F1 /* HangmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
 		6734903C19F6F6F400A574F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		679A611D19F84D0100A261B6 /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				6734901819F5AE8400A574F1 /* AppDelegate.swift */,
 				6734901D19F5AE8400A574F1 /* ViewController.swift */,
+				679A611D19F84D0100A261B6 /* NewGameViewController.swift */,
 				6734901F19F5AE8400A574F1 /* Main.storyboard */,
 				6734902419F5AE8400A574F1 /* LaunchScreen.xib */,
 				6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6734901E19F5AE8400A574F1 /* ViewController.swift in Sources */,
+				679A611E19F84D0100A261B6 /* NewGameViewController.swift in Sources */,
 				6734901C19F5AE8400A574F1 /* Hangman.xcdatamodeld in Sources */,
 				6734901919F5AE8400A574F1 /* AppDelegate.swift in Sources */,
 			);
