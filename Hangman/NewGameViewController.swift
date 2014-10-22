@@ -31,16 +31,15 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func clickedButton(sender: AnyObject?) {
      
-        // get current text from textfield
-        if self.textField!.text == "secret"
+        var mHangman = HangmanWord(word: textField!.text)
+        
+        if mHangman.IsWordGood()
         {
-            // create model
-            // implement segue
             self.performSegueWithIdentifier("New2PlayerGame", sender: self)
         }
         else
         {
-            
+            // alert user word is invalid
         }
 
     }
