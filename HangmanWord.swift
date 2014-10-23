@@ -12,14 +12,13 @@ import Foundation
 class HangmanWord {
     
     var mWord: String
-    var mGuess: String
-    var mLife: Int
+    var mGuess: String = "_ _ _ _"
+    var mLife: Int = 0
     
-    init(word: String){
+    init(word: String)
+    {
         
         mWord = word
-        mGuess = ""
-        mLife = 0
         
         if IsWordGood()
         {
