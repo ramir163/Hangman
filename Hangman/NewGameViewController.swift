@@ -43,8 +43,11 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
         }
 
     }
-
     
+    @IBAction func doneEnteringWord(sender: AnyObject?){
+        
+        textField?.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 

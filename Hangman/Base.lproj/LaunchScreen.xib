@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,19 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman Logo 1122x1122" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-qW-Ee3">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 240x240" translatesAutoresizingMaskIntoConstraints="NO" id="Fig-XK-bOf">
+                    <rect key="frame" x="120" y="120" width="240" height="240"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="WHP-qW-Ee3" secondAttribute="height" multiplier="1:1" id="mB0-Jb-vaN"/>
+                        <constraint firstAttribute="width" constant="240" id="U9P-vt-92e"/>
+                        <constraint firstAttribute="height" constant="240" id="hzw-iH-980"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="WHP-qW-Ee3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8ez-Wg-eUB"/>
-                <constraint firstAttribute="bottom" secondItem="WHP-qW-Ee3" secondAttribute="bottom" id="Ai9-kc-QLF"/>
-                <constraint firstAttribute="centerX" secondItem="WHP-qW-Ee3" secondAttribute="centerX" id="TqA-ym-c1m"/>
-                <constraint firstAttribute="centerY" secondItem="WHP-qW-Ee3" secondAttribute="centerY" id="Xxk-TJ-7Wm"/>
+                <constraint firstAttribute="centerX" secondItem="Fig-XK-bOf" secondAttribute="centerX" id="Fyr-f0-xHM"/>
+                <constraint firstAttribute="centerY" secondItem="Fig-XK-bOf" secondAttribute="centerY" id="jU1-Mf-3je"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -31,6 +29,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Hangman Logo 1122x1122" width="1122" height="1122"/>
+        <image name="Hangman Logo 240x240" width="240" height="240"/>
     </resources>
 </document>

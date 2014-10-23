@@ -12,13 +12,15 @@ import Foundation
 class HangmanWord {
     
     var mWord: String
-    var mGuess: String = "_ _ _ _"
-    var mLife: Int = 0
+    var mGuess: String
+    var mLife: Int
     
     init(word: String)
     {
         
         mWord = word
+        mGuess = ""
+        mLife = 0
         
         if IsWordGood()
         {
@@ -34,35 +36,37 @@ class HangmanWord {
     
     func IsWordGood() -> Bool {
         
-        if mWord == "Secret"
+        if true
         {
             // check that is it only letters
             // no spaces, numbers or punctuation
             return true
         }
-        else
-        {
-            return false
-        }
+        //return false
     }
     
-    func GuessCharacter(char: Character) -> Bool
+    func GuessCharacter(char: String) -> Bool
     {
-        if mWord == "Hangman" // check if character is in string
+        if true // check if character is in string
         {
             // put char in correct index in mGuess
+            mGuess = char
             return true
 
         }
         
-        mLife -= 1
-        return false
+        //mLife -= 1
+        //return false
         
     }
     
     func GetLife() -> Int
     {
         return mLife
+    }
+    
+    func GetGuess() -> String{
+        return mGuess
     }
     
 }

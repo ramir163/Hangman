@@ -57,23 +57,6 @@
                                     <segue destination="Zyq-ct-qug" kind="show" id="syp-ha-ENn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press 1 Player to guess a random word. Press 2 Players to enter a word, and have a second player guess it." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbM-uG-0nI">
-                                <rect key="frame" x="263" y="130" width="175" height="95"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="BtR-yt-cLA"/>
-                                    <constraint firstAttribute="height" constant="95" id="Ty3-6o-aE9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman Logo 120x120" translatesAutoresizingMaskIntoConstraints="NO" id="H0M-Ko-JIA">
-                                <rect key="frame" x="158" y="130" width="95" height="95"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="QU1-BM-7b4"/>
-                                    <constraint firstAttribute="width" constant="95" id="mYc-JS-ho3"/>
-                                </constraints>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJK-0r-HCx">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
@@ -83,23 +66,70 @@
                                     <navigationItem title="Welcome to Hangman" id="OxL-gX-hQT"/>
                                 </items>
                             </navigationBar>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 180x180" translatesAutoresizingMaskIntoConstraints="NO" id="Ln4-CU-jeU">
+                                <rect key="frame" x="0.0" y="-180" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="DGK-kW-fkr"/>
+                                    <constraint firstAttribute="width" constant="180" id="HGG-DU-DTY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DGK-kW-fkr"/>
+                                        <exclude reference="HGG-DU-DTY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="DGK-kW-fkr"/>
+                                        <include reference="HGG-DU-DTY"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 120x120" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-yj-vFG">
+                                <rect key="frame" x="240" y="110" width="120" height="120"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PbM-uG-0nI" firstAttribute="leading" secondItem="H0M-Ko-JIA" secondAttribute="trailing" constant="10" id="2tt-TT-9N4"/>
                             <constraint firstItem="EJK-0r-HCx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="76d-5j-gJR"/>
+                            <constraint firstAttribute="centerX" secondItem="P2R-yj-vFG" secondAttribute="centerX" id="77P-fH-2bl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EJK-0r-HCx" secondAttribute="trailing" constant="-16" id="7bh-Ie-vsB"/>
+                            <constraint firstItem="nXn-cw-9VY" firstAttribute="top" secondItem="Ln4-CU-jeU" secondAttribute="bottom" constant="17" id="E7M-RK-tS7">
+                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                            </constraint>
                             <constraint firstItem="GWh-H7-GD6" firstAttribute="top" secondItem="nXn-cw-9VY" secondAttribute="bottom" constant="25" id="HBt-37-L4q"/>
+                            <constraint firstItem="nXn-cw-9VY" firstAttribute="top" secondItem="P2R-yj-vFG" secondAttribute="bottom" constant="45" id="JJu-f8-FYH"/>
                             <constraint firstItem="GWh-H7-GD6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="330" id="Ja7-Zw-Zhj"/>
                             <constraint firstItem="EJK-0r-HCx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KYS-Vt-sRq"/>
-                            <constraint firstItem="nXn-cw-9VY" firstAttribute="top" secondItem="H0M-Ko-JIA" secondAttribute="bottom" constant="50" id="OFh-Jh-208"/>
+                            <constraint firstItem="Ln4-CU-jeU" firstAttribute="top" secondItem="EJK-0r-HCx" secondAttribute="bottom" constant="14" id="OLW-MO-x6R">
+                                <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="EJK-0r-HCx" secondAttribute="centerX" id="OcU-Wt-5Bk"/>
                             <constraint firstAttribute="centerX" secondItem="nXn-cw-9VY" secondAttribute="centerX" id="QnV-C8-JBD"/>
-                            <constraint firstAttribute="centerX" secondItem="PbM-uG-0nI" secondAttribute="centerX" constant="-50" id="Zcz-vs-gGx"/>
-                            <constraint firstItem="PbM-uG-0nI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="110" id="arh-bh-4Gr"/>
+                            <constraint firstAttribute="centerX" secondItem="Ln4-CU-jeU" secondAttribute="centerX" id="Zsw-Ju-ktv"/>
                             <constraint firstAttribute="centerX" secondItem="GWh-H7-GD6" secondAttribute="centerX" id="kGS-nK-QlZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ln4-CU-jeU"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="OLW-MO-x6R"/>
+                                <exclude reference="Zsw-Ju-ktv"/>
+                                <exclude reference="E7M-RK-tS7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Ln4-CU-jeU"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="OLW-MO-x6R"/>
+                                <include reference="Zsw-Ju-ktv"/>
+                                <include reference="E7M-RK-tS7"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -118,25 +148,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-Cr-EbM">
-                                <rect key="frame" x="200" y="294" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="I8e-Wd-uyT"/>
-                                    <constraint firstAttribute="height" constant="50" id="bJ4-dW-LWC"/>
-                                </constraints>
-                                <state key="normal" title="Start Game">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="clickedButton:" destination="Zyq-ct-qug" eventType="touchUpInside" id="xnp-yl-QZA"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSh-uR-cbp">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
@@ -165,20 +176,30 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="9oH-n2-qqh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="wV9-JP-05c">
-                                <rect key="frame" x="200" y="89" width="200" height="125"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-Cr-EbM">
+                                <rect key="frame" x="200" y="450" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="3dI-mm-Wa1"/>
-                                    <constraint firstAttribute="height" constant="125" id="QYl-Ou-pc8"/>
+                                    <constraint firstAttribute="width" constant="200" id="I8e-Wd-uyT"/>
+                                    <constraint firstAttribute="height" constant="50" id="bJ4-dW-LWC"/>
                                 </constraints>
-                                <string key="text">Player 1 enters a word, then gives device to Player 2 to guess. The word is only letters - no spaces, numbers or punctuation and at least 2 letters, no more than 8.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickedButton:" destination="Zyq-ct-qug" eventType="touchUpInside" id="xnp-yl-QZA"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 120x120" translatesAutoresizingMaskIntoConstraints="NO" id="xe9-9W-230">
+                                <rect key="frame" x="240" y="110" width="120" height="120"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new word here." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
-                                <rect key="frame" x="175" y="239" width="250" height="30"/>
+                                <rect key="frame" x="175" y="285" width="250" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5Bq-hZ-NUf"/>
@@ -187,25 +208,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="Zyq-ct-qug" id="ac8-tr-aFc"/>
+                                    <action selector="doneEnteringWord:" destination="Zyq-ct-qug" eventType="editingDidEndOnExit" id="yy7-9e-nqM"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LSh-uR-cbp" secondAttribute="trailing" constant="-16" id="2fQ-PX-ixz"/>
-                            <constraint firstItem="zzc-Cr-EbM" firstAttribute="top" secondItem="Y4o-qU-ydG" secondAttribute="bottom" constant="25" id="7tT-6d-qFd"/>
+                            <constraint firstItem="zzc-Cr-EbM" firstAttribute="top" secondItem="Y4o-qU-ydG" secondAttribute="bottom" constant="31" id="79T-kG-rUP">
+                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                            </constraint>
                             <constraint firstItem="LSh-uR-cbp" firstAttribute="top" secondItem="vGH-8G-8Xp" secondAttribute="bottom" id="Ktk-wg-AK3"/>
                             <constraint firstAttribute="centerX" secondItem="zzc-Cr-EbM" secondAttribute="centerX" id="P23-So-NtK"/>
-                            <constraint firstItem="Y4o-qU-ydG" firstAttribute="top" secondItem="wV9-JP-05c" secondAttribute="bottom" constant="25" id="Sd5-Ob-BvZ"/>
+                            <constraint firstItem="xe9-9W-230" firstAttribute="top" secondItem="LSh-uR-cbp" secondAttribute="bottom" constant="46" id="WPr-8O-9r8"/>
                             <constraint firstAttribute="centerX" secondItem="Y4o-qU-ydG" secondAttribute="centerX" id="d4x-hZ-hAe"/>
+                            <constraint firstAttribute="centerX" secondItem="xe9-9W-230" secondAttribute="centerX" id="dfj-qx-CbO"/>
                             <constraint firstItem="LSh-uR-cbp" firstAttribute="leading" secondItem="AFs-re-drZ" secondAttribute="leadingMargin" constant="-16" id="fmx-lH-deL"/>
-                            <constraint firstAttribute="centerX" secondItem="wV9-JP-05c" secondAttribute="centerX" id="gkf-MP-DJ4"/>
                             <constraint firstAttribute="centerX" secondItem="9L4-be-RwO" secondAttribute="centerX" id="nrl-oe-Y1I"/>
+                            <constraint firstAttribute="centerY" secondItem="Y4o-qU-ydG" secondAttribute="centerY" id="pHl-ro-d18"/>
                             <constraint firstItem="kEX-1G-YwC" firstAttribute="top" secondItem="9L4-be-RwO" secondAttribute="bottom" constant="25" id="qIP-v3-v8v"/>
-                            <constraint firstItem="wV9-JP-05c" firstAttribute="top" secondItem="LSh-uR-cbp" secondAttribute="bottom" constant="25" id="wTH-Ej-k5A"/>
+                            <constraint firstItem="9L4-be-RwO" firstAttribute="top" secondItem="zzc-Cr-EbM" secondAttribute="bottom" constant="25" id="upw-g4-dkV"/>
                             <constraint firstAttribute="centerX" secondItem="LSh-uR-cbp" secondAttribute="centerX" id="xk3-jN-uxY"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="79T-kG-rUP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="79T-kG-rUP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="textField" destination="Y4o-qU-ydG" id="oQu-4J-1k1"/>
@@ -219,7 +253,7 @@
         <!--Game-->
         <scene sceneID="Ivv-Bi-5Pb">
             <objects>
-                <viewController title="Game" id="2eC-BL-M74" sceneMemberID="viewController">
+                <viewController title="Game" id="2eC-BL-M74" customClass="GameViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Acx-Wn-elp"/>
                         <viewControllerLayoutGuide type="bottom" id="vop-Fu-jkr"/>
@@ -228,17 +262,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word to Guess." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvK-aF-0Ec">
-                                <rect key="frame" x="175" y="74" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="6pZ-bR-VWX"/>
-                                    <constraint firstAttribute="height" constant="50" id="tqo-Sr-atk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman Game 10" translatesAutoresizingMaskIntoConstraints="NO" id="AAo-xb-Flj">
                                 <rect key="frame" x="175" y="134" width="250" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -263,20 +286,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5DP-vR-Cei">
+                                <rect key="frame" x="175" y="84" width="250" height="30"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9yy-pE-JGA"/>
+                                    <constraint firstAttribute="height" constant="30" id="cJO-et-Bdv"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2eC-BL-M74" id="z8G-Pv-sDR"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S0G-Tf-FED" firstAttribute="leading" secondItem="P1G-uB-epL" secondAttribute="leadingMargin" constant="-16" id="7DH-R1-Viw"/>
-                            <constraint firstItem="zvK-aF-0Ec" firstAttribute="top" secondItem="S0G-Tf-FED" secondAttribute="bottom" constant="10" id="BtX-gH-stP"/>
-                            <constraint firstItem="AAo-xb-Flj" firstAttribute="top" secondItem="zvK-aF-0Ec" secondAttribute="bottom" constant="10" id="NFj-u3-Bqo"/>
+                            <constraint firstItem="AAo-xb-Flj" firstAttribute="top" secondItem="5DP-vR-Cei" secondAttribute="bottom" constant="20" id="K96-qX-ckP"/>
+                            <constraint firstItem="5DP-vR-Cei" firstAttribute="top" secondItem="S0G-Tf-FED" secondAttribute="bottom" constant="20" id="Pnx-36-YIF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S0G-Tf-FED" secondAttribute="trailing" constant="-16" id="QrD-0Z-2vE"/>
                             <constraint firstItem="S0G-Tf-FED" firstAttribute="top" secondItem="Acx-Wn-elp" secondAttribute="bottom" id="WK6-an-nt4"/>
-                            <constraint firstAttribute="centerX" secondItem="zvK-aF-0Ec" secondAttribute="centerX" id="XMb-Hq-H2F"/>
                             <constraint firstAttribute="centerX" secondItem="S0G-Tf-FED" secondAttribute="centerX" id="lJh-P1-0YF"/>
+                            <constraint firstAttribute="centerX" secondItem="5DP-vR-Cei" secondAttribute="centerX" id="ojI-VU-LHj"/>
                             <constraint firstAttribute="centerX" secondItem="AAo-xb-Flj" secondAttribute="centerX" id="yC7-jZ-dIY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="AAo-xb-Flj" id="wUa-tI-eR3"/>
+                        <outlet property="label" destination="5DP-vR-Cei" id="6hC-ZP-DYn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG6-UG-Wrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,9 +327,10 @@
     <resources>
         <image name="Hangman Game 10" width="1077" height="1077"/>
         <image name="Hangman Logo 120x120" width="120" height="120"/>
+        <image name="Hangman Logo 180x180" width="180" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Mf-Dh-1o5"/>
+        <segue reference="9oH-n2-qqh"/>
         <segue reference="Ssi-G0-puA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
