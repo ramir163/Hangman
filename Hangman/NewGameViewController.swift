@@ -9,45 +9,46 @@
 import UIKit
 
 class NewGameViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet var textField:UITextField?
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-            }
+        textField!.becomeFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-            // give hangman model the word
-        if textField.text == "hello"
-        {
-            textField.text = "invalid"
-        }
+    override func viewDidAppear(animated: Bool) {
+        //textField!.becomeFirstResponder()
     }
-
     
-    @IBAction func clickedButton(sender: AnyObject?) {
+    
+    @IBAction func clickedButton(sender: UIButton?) {
      
-        var mHangman = HangmanWord(word: textField!.text)
+        var mHangman = HangmanWord(word:"test") //textField!.text)
         
         if mHangman.IsWordGood()
         {
-            self.performSegueWithIdentifier("New2PlayerGame", sender: self)
+            self.performSegueWithIdentifier("newGame", sender: self)
         }
         else
         {
-            // alert user word is invalid
+
         }
 
     }
     
-    @IBAction func doneEnteringWord(sender: AnyObject?){
+    @IBAction func doneEnteringWord(sender: UITextField?){
         
-        textField?.resignFirstResponder()
+        sender!.resignFirstResponder()
     }
+    
+    
     /*
     // MARK: - Navigation
 

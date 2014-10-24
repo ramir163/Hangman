@@ -54,7 +54,7 @@ class HangmanWord {
             return true
 
         }
-        
+        // else reduce life because of incorrect points
         //mLife -= 1
         //return false
         
