@@ -5,6 +5,68 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--About View Controller-->
+        <scene sceneID="M7V-dA-SNC">
+            <objects>
+                <viewController id="Q06-BZ-6MF" customClass="AboutViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="goS-Hy-gCi"/>
+                        <viewControllerLayoutGuide type="bottom" id="4UQ-n5-m7y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7WR-rZ-mfB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6so-5r-1q6">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zAT-O4-RQR"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="About" id="8bH-WP-QTO">
+                                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="m4G-s6-iXR">
+                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="dismiss:" destination="Q06-BZ-6MF" id="C54-eZ-cMs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-c7-MG4">
+                                <rect key="frame" x="52" y="100" width="496" height="464"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="About Hangman">
+                                        <attributes>
+                                            <color key="NSColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4UQ-n5-m7y" firstAttribute="top" secondItem="yJ4-c7-MG4" secondAttribute="bottom" constant="36" id="A06-q0-5uY"/>
+                            <constraint firstItem="6so-5r-1q6" firstAttribute="top" secondItem="goS-Hy-gCi" secondAttribute="bottom" id="G66-8M-Zzg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6so-5r-1q6" secondAttribute="trailing" constant="-16" id="GMh-JU-8Xf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yJ4-c7-MG4" secondAttribute="trailing" constant="36" id="JYx-Dm-Okd"/>
+                            <constraint firstItem="yJ4-c7-MG4" firstAttribute="leading" secondItem="7WR-rZ-mfB" secondAttribute="leadingMargin" constant="36" id="YUT-Ks-qBh"/>
+                            <constraint firstItem="6so-5r-1q6" firstAttribute="leading" secondItem="7WR-rZ-mfB" secondAttribute="leadingMargin" constant="-16" id="nU9-j6-On6"/>
+                            <constraint firstItem="yJ4-c7-MG4" firstAttribute="top" secondItem="6so-5r-1q6" secondAttribute="bottom" constant="36" id="uNA-t5-DNg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2KB-W0-PCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="2631"/>
+        </scene>
         <!--StartController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -69,7 +131,14 @@
                                     <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Welcome to Hangman" id="OxL-gX-hQT"/>
+                                    <navigationItem title="Welcome to Hangman" id="OxL-gX-hQT">
+                                        <barButtonItem key="leftBarButtonItem" title="About" id="MMv-FR-DEa">
+                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="Q06-BZ-6MF" kind="presentation" identifier="modalAbout" id="8od-Vl-nA2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 180x180" translatesAutoresizingMaskIntoConstraints="NO" id="Ln4-CU-jeU">
@@ -137,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350" y="1927"/>
+            <point key="canvasLocation" x="350" y="1887"/>
         </scene>
         <!--NewGame-->
         <scene sceneID="Kea-dV-wTt">
@@ -151,39 +220,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 120x120" translatesAutoresizingMaskIntoConstraints="NO" id="xe9-9W-230">
-                                <rect key="frame" x="240" y="100" width="120" height="120"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new word here." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
-                                <rect key="frame" x="175" y="285" width="250" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5Bq-hZ-NUf"/>
-                                    <constraint firstAttribute="width" constant="250" id="ijQ-EJ-JOe"/>
-                                </constraints>
-                                <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="doneEnteringWord:" destination="Zyq-ct-qug" eventType="editingDidEndOnExit" id="TLE-r8-SEl"/>
-                                </connections>
-                            </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgZ-1C-b09">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="2 Player Game" id="oiy-Dx-JvO">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="x1k-Gu-cIE">
-                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <segue destination="vXZ-lx-hvc" kind="show" id="BEp-bh-jZ9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-Cr-EbM">
                                 <rect key="frame" x="200" y="450" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -204,6 +240,45 @@
                                     <action selector="clickedButton:" destination="Zyq-ct-qug" eventType="touchUpInside" id="ndw-HD-CKy"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 120x120" translatesAutoresizingMaskIntoConstraints="NO" id="xe9-9W-230">
+                                <rect key="frame" x="240" y="100" width="120" height="120"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgZ-1C-b09">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="2 Player Game" id="oiy-Dx-JvO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="x1k-Gu-cIE">
+                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="show" id="BEp-bh-jZ9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Help" id="bV5-x3-i9j">
+                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="r9M-4y-Mpf" kind="presentation" id="wOx-hK-zt0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new word here." textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-qU-ydG">
+                                <rect key="frame" x="175" y="285" width="250" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Bq-hZ-NUf"/>
+                                    <constraint firstAttribute="width" constant="250" id="ijQ-EJ-JOe"/>
+                                </constraints>
+                                <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="doneEnteringWord:" destination="Zyq-ct-qug" eventType="editingDidEndOnExit" id="TLE-r8-SEl"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -271,6 +346,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Hangman" id="dZy-fi-kia">
+                                        <barButtonItem key="leftBarButtonItem" title="Help" id="wKe-Tb-Xwv">
+                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="r9M-4y-Mpf" kind="presentation" id="Bsc-ng-fbe"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Quit" id="YYq-zI-sOi">
                                             <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -332,17 +413,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You guessed correctly!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-0e-ohL">
-                                <rect key="frame" x="175" y="110" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="73K-90-0DU"/>
-                                    <constraint firstAttribute="height" constant="50" id="Qkt-xK-Vrj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 240x240" translatesAutoresizingMaskIntoConstraints="NO" id="eCL-Ut-dDe">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <constraints>
@@ -382,6 +452,17 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Jkk-Zv-SrC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Winning isn't everything.&quot;" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-0e-ohL">
+                                <rect key="frame" x="175" y="110" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="73K-90-0DU"/>
+                                    <constraint firstAttribute="height" constant="50" id="Qkt-xK-Vrj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -400,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdN-6q-ipo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2409" y="385"/>
+            <point key="canvasLocation" x="2298" y="385"/>
         </scene>
         <!--LostGame-->
         <scene sceneID="8Me-g9-ZZE">
@@ -414,17 +495,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-K9-PhR">
-                                <rect key="frame" x="175" y="110" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="L5c-gt-j96"/>
-                                    <constraint firstAttribute="width" constant="250" id="STZ-Rv-usl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Game 10" translatesAutoresizingMaskIntoConstraints="NO" id="GAU-ke-90U">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <constraints>
@@ -441,7 +511,7 @@
                                     <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="You lose." id="M5F-Je-iWP"/>
+                                    <navigationItem title="Game Over" id="M5F-Je-iWP"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixi-iG-18k">
@@ -464,6 +534,17 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="yPJ-8V-yuS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You learn more from losing than winning" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-K9-PhR">
+                                <rect key="frame" x="175" y="110" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L5c-gt-j96"/>
+                                    <constraint firstAttribute="width" constant="250" id="STZ-Rv-usl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -482,7 +563,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGS-Ln-aX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2409" y="1146"/>
+            <point key="canvasLocation" x="2298" y="1132"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="mDn-uj-EFG">
+            <objects>
+                <viewController title="Help" id="r9M-4y-Mpf" customClass="HelpViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Fv-BT-Pht"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0m-tj-XFG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pwu-fL-Ysx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zP-fy-hJE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="r85-VL-cf6"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Help" id="KOW-tt-pVQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="37F-Ou-qWF">
+                                            <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="dismiss:" destination="r9M-4y-Mpf" id="bqd-Jz-wnM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-ki-9Z5">
+                                <rect key="frame" x="52" y="100" width="496" height="464"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="1 Player or 2 Player">
+                                        <attributes>
+                                            <color key="NSColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="G0m-tj-XFG" firstAttribute="top" secondItem="rrj-ki-9Z5" secondAttribute="bottom" constant="36" id="BLI-gR-xT2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4zP-fy-hJE" secondAttribute="trailing" constant="-16" id="DCc-nF-7uy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rrj-ki-9Z5" secondAttribute="trailing" constant="36" id="EKD-Qq-r4u"/>
+                            <constraint firstItem="4zP-fy-hJE" firstAttribute="top" secondItem="4Fv-BT-Pht" secondAttribute="bottom" id="HdQ-37-HOf"/>
+                            <constraint firstItem="rrj-ki-9Z5" firstAttribute="top" secondItem="4zP-fy-hJE" secondAttribute="bottom" constant="36" id="KWj-h6-8pF"/>
+                            <constraint firstItem="rrj-ki-9Z5" firstAttribute="leading" secondItem="Pwu-fL-Ysx" secondAttribute="leadingMargin" constant="36" id="S2b-VJ-J0K"/>
+                            <constraint firstItem="4zP-fy-hJE" firstAttribute="leading" secondItem="Pwu-fL-Ysx" secondAttribute="leadingMargin" constant="-16" id="thh-6F-94r"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcn-oG-wah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298" y="-361"/>
         </scene>
     </scenes>
     <resources>
@@ -492,8 +635,9 @@
         <image name="Hangman Logo 240x240" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ssi-G0-puA"/>
+        <segue reference="UqQ-W6-FIm"/>
         <segue reference="BcM-vf-6W8"/>
+        <segue reference="Bsc-ng-fbe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6720649A19FB144F00E9C517 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720649919FB144F00E9C517 /* AboutViewController.swift */; };
+		6720649C19FB146100E9C517 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720649B19FB146100E9C517 /* HelpViewController.swift */; };
 		6734901919F5AE8400A574F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734901819F5AE8400A574F1 /* AppDelegate.swift */; };
 		6734901C19F5AE8400A574F1 /* Hangman.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */; };
 		6734901E19F5AE8400A574F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734901D19F5AE8400A574F1 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6720649919FB144F00E9C517 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		6720649B19FB146100E9C517 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		6734901319F5AE8400A574F1 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6734901719F5AE8400A574F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6734901819F5AE8400A574F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,16 +89,18 @@
 		6734901519F5AE8400A574F1 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
+				6720649919FB144F00E9C517 /* AboutViewController.swift */,
 				6734901819F5AE8400A574F1 /* AppDelegate.swift */,
-				6768A75119F8762200BA4D07 /* HangmanWord.swift */,
-				679A611D19F84D0100A261B6 /* NewGameViewController.swift */,
 				6768A75319F8A63C00BA4D07 /* GameViewController.swift */,
-				6734901D19F5AE8400A574F1 /* ViewController.swift */,
-				6734901F19F5AE8400A574F1 /* Main.storyboard */,
-				6734902419F5AE8400A574F1 /* LaunchScreen.xib */,
 				6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */,
+				6768A75119F8762200BA4D07 /* HangmanWord.swift */,
+				6720649B19FB146100E9C517 /* HelpViewController.swift */,
 				6734903C19F6F6F400A574F1 /* Images.xcassets */,
+				6734902419F5AE8400A574F1 /* LaunchScreen.xib */,
+				6734901F19F5AE8400A574F1 /* Main.storyboard */,
+				679A611D19F84D0100A261B6 /* NewGameViewController.swift */,
 				6734901619F5AE8400A574F1 /* Supporting Files */,
+				6734901D19F5AE8400A574F1 /* ViewController.swift */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -227,6 +233,8 @@
 				6768A75219F8762200BA4D07 /* HangmanWord.swift in Sources */,
 				6734901E19F5AE8400A574F1 /* ViewController.swift in Sources */,
 				679A611E19F84D0100A261B6 /* NewGameViewController.swift in Sources */,
+				6720649C19FB146100E9C517 /* HelpViewController.swift in Sources */,
+				6720649A19FB144F00E9C517 /* AboutViewController.swift in Sources */,
 				6734901C19F5AE8400A574F1 /* Hangman.xcdatamodeld in Sources */,
 				6768A75419F8A63C00BA4D07 /* GameViewController.swift in Sources */,
 				6734901919F5AE8400A574F1 /* AppDelegate.swift in Sources */,

@@ -33,8 +33,8 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func clickedButton(sender: UIButton?) {
-     
+    @IBAction func clickedButton(sender: UIButton?)
+    {
         self.mHangmanWord = HangmanWord(word:self.textField!.text)
         
         if self.mHangmanWord.IsWordGood()
@@ -48,8 +48,8 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    @IBAction func doneEnteringWord(sender: UITextField?){
-        
+    @IBAction func doneEnteringWord(sender: UITextField?)
+    {
         sender!.resignFirstResponder()
     }
 

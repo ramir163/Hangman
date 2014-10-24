@@ -35,6 +35,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         self.SetImage()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        textField!.becomeFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
