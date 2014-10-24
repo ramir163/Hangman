@@ -9,28 +9,53 @@
 import Foundation
 
 // Class that implements hangman game
+
+let wordBank: [String] = ["hangman", "michigan", "apple", "blood"]
+
+func IsContained(char: String, word: String) -> Bool
+{
+    for letter in word
+    {
+        for c in char
+        {
+            if c == letter
+            {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+func RandomWord() -> String
+{
+    let random: Int = Int(arc4random()) % wordBank.count
+    
+    return wordBank[random]
+}
+
 class HangmanWord {
-    
-    var mWord: String
-    var mGuess: String
-    var mLife: Int
-    
+
+    var mWord: String = ""
+    var mGuess: [Int:Bool] = [Int:Bool]()
+    var mLife: Int = 0
+  
     init(word: String)
     {
-        
-        mWord = word
-        mGuess = ""
-        mLife = 0
-        
-        if IsWordGood()
+        if word == ""
         {
-            mLife = 10
-            mGuess = ""
+            mWord = RandomWord()
+        }
+        else
+        {
+            mWord = word
+        }
         
-            for character in mWord
-            {
-                mGuess += "_ "
-            }
+        var i = 0
+        for c in mWord
+        {
+            mGuess[i] = false;
+            i++
         }
     }
     
@@ -45,19 +70,43 @@ class HangmanWord {
         //return false
     }
     
+    func Replace(char: String) -> ()
+    {
+        var i = 0
+        for letter in mWord
+        {
+            for c in char
+            {
+                if c == letter
+                {
+                    mGuess[i] = true
+                }
+            }
+            i++
+        }
+    }
+    
     func GuessCharacter(char: String) -> Bool
     {
-        if true // check if character is in string
+        if IsContained(char, mWord) // check if character is in string
         {
-            // put char in correct index in mGuess
-            mGuess = char
+            Replace(char)
             return true
 
         }
-        // else reduce life because of incorrect points
-        //mLife -= 1
-        //return false
-        
+        else
+        {
+            ReduceLife()
+            return false
+        }
+    }
+    
+    func ReduceLife() -> ()
+    {
+        if mLife != 9
+        {
+            mLife += 1
+        }
     }
     
     func GetLife() -> Int
@@ -65,8 +114,38 @@ class HangmanWord {
         return mLife
     }
     
+    func HasGuessedWord() -> Bool
+    {
+        for (key,pair) in mGuess
+        {
+            if pair == false
+            {
+                return false
+            }
+        }
+        return true
+    }
+    
     func GetGuess() -> String{
-        return mGuess
+        
+        var i = 0
+        var result: String = ""
+        
+        for char in mWord
+        {
+            if (mGuess[i] == true)
+            {
+                result.append(char)
+                result += " "
+            }
+            else
+            {
+                result += "_ "
+            }
+            i++
+        }
+
+        return result
     }
     
 }

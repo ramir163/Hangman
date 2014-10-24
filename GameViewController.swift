@@ -13,6 +13,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var textField:UITextField?
     @IBOutlet var imageView:UIImageView?
     
+    var mHangmanWord:HangmanWord = HangmanWord(word: "")
+    
     var imageNames = ["Hangman Game 1",
         "Hangman Game 2",
         "Hangman Game 3",
@@ -24,44 +26,57 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         "Hangman Game 9",
         "Hangman Game 10"]
     
-    var life: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set starting image for game
-        // Do any additional setup after loading the view.
-        
-        //show keyboard and intial text in label
         textField!.becomeFirstResponder()
-        textField!.text = "_ _ _ _ _"
+        textField!.text = mHangmanWord.GetGuess()
         
         self.SetImage()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func SetImage() -> (){
         
-        if self.life == 10
-        {
-            self.life = 0
-        }
-
-        var newImage = UIImage(named: imageNames[life])
+        self.CheckGameStatus()
+        var newImage = UIImage(named: imageNames[self.mHangmanWord.GetLife()])
         self.imageView!.image = newImage
-        
-        life += 1
-
+    
+    }
+    
+    func GameOver() -> ()
+    {
+        self.performSegueWithIdentifier("GameOver", sender: self)
+    }
+    
+    func HasGuessedCorrectly() -> ()
+    {
+        self.performSegueWithIdentifier("HasGuessedCorrectly", sender: self)
+    }
+    
+    func CheckGameStatus() -> ()
+    {
+        if self.mHangmanWord.GetLife() == 9
+        {
+            self.GameOver()
+        }
+        if self.mHangmanWord.HasGuessedWord()
+        {
+            self.HasGuessedCorrectly()
+        }
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString: String) -> Bool {
-        // do something with replacementString
         
-        self.textField!.text = replacementString
+        self.CheckGameStatus()
+        
+        self.mHangmanWord.GuessCharacter(replacementString)
+        
+        textField.text = mHangmanWord.GetGuess()
+        
         self.SetImage()
         
         return false

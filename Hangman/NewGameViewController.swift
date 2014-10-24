@@ -11,7 +11,9 @@ import UIKit
 class NewGameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var textField:UITextField?
-
+    
+    var mHangmanWord:HangmanWord = HangmanWord(word: "2PLAYERGAME")
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -20,25 +22,28 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
-        //textField!.becomeFirstResponder()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "newGame2Player"
+        {
+            var destinationViewController: GameViewController = segue.destinationViewController as GameViewController
+            destinationViewController.mHangmanWord = self.mHangmanWord
+        }
     }
-    
     
     @IBAction func clickedButton(sender: UIButton?) {
      
-        var mHangman = HangmanWord(word:"test") //textField!.text)
+        self.mHangmanWord = HangmanWord(word:self.textField!.text)
         
-        if mHangman.IsWordGood()
+        if self.mHangmanWord.IsWordGood()
         {
-            self.performSegueWithIdentifier("newGame", sender: self)
+            self.performSegueWithIdentifier("newGame2Player", sender: self)
         }
         else
         {
-
+            // alert user word does not work
         }
 
     }
@@ -47,16 +52,5 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
         
         sender!.resignFirstResponder()
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
