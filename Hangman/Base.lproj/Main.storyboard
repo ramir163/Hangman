@@ -36,30 +36,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-c7-MG4">
-                                <rect key="frame" x="52" y="100" width="496" height="464"/>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="About Hangman">
-                                        <attributes>
-                                            <color key="NSColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G97-eM-kDp">
+                                <rect key="frame" x="26" y="89" width="548" height="486"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">About: The inspiration for this game  came out of a 'hacking session' held at the Ruby MeetUp group in East Lansing, MI (meetup.com/Lansing-Ruby-Meetup-Group). I collaborated on building a Ruby script that allowed us to play hangman via the command line. Afterwads, to get aclimated with iOS 8, Swift and Xcode, I took on building the iOS application for the script we had. I designed the logos, game pictures and color palettes. Yes, the red is supposed to be blood. Thank listofrandomwords.com for the tough words in 1 Player games. For both positive and negative feedback or any bigs you may find, feel free to email me ramir163@msu.edu.</mutableString>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="4UQ-n5-m7y" firstAttribute="top" secondItem="yJ4-c7-MG4" secondAttribute="bottom" constant="36" id="A06-q0-5uY"/>
                             <constraint firstItem="6so-5r-1q6" firstAttribute="top" secondItem="goS-Hy-gCi" secondAttribute="bottom" id="G66-8M-Zzg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6so-5r-1q6" secondAttribute="trailing" constant="-16" id="GMh-JU-8Xf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yJ4-c7-MG4" secondAttribute="trailing" constant="36" id="JYx-Dm-Okd"/>
-                            <constraint firstItem="yJ4-c7-MG4" firstAttribute="leading" secondItem="7WR-rZ-mfB" secondAttribute="leadingMargin" constant="36" id="YUT-Ks-qBh"/>
+                            <constraint firstItem="4UQ-n5-m7y" firstAttribute="top" secondItem="G97-eM-kDp" secondAttribute="bottom" constant="25" id="M3W-EM-I65"/>
+                            <constraint firstItem="G97-eM-kDp" firstAttribute="top" secondItem="6so-5r-1q6" secondAttribute="bottom" constant="25" id="mba-n9-X6p"/>
                             <constraint firstItem="6so-5r-1q6" firstAttribute="leading" secondItem="7WR-rZ-mfB" secondAttribute="leadingMargin" constant="-16" id="nU9-j6-On6"/>
-                            <constraint firstItem="yJ4-c7-MG4" firstAttribute="top" secondItem="6so-5r-1q6" secondAttribute="bottom" constant="36" id="uNA-t5-DNg"/>
+                            <constraint firstItem="G97-eM-kDp" firstAttribute="leading" secondItem="7WR-rZ-mfB" secondAttribute="leadingMargin" constant="10" id="pNd-0F-NCI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G97-eM-kDp" secondAttribute="trailing" constant="10" id="sAJ-a1-8dT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -452,7 +447,7 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Jkk-Zv-SrC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Winning isn't everything.&quot;" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-0e-ohL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winning isn't everything." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-0e-ohL">
                                 <rect key="frame" x="175" y="110" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -534,7 +529,7 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="yPJ-8V-yuS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You learn more from losing than winning" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-K9-PhR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You learn more from losing than winning." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-K9-PhR">
                                 <rect key="frame" x="175" y="110" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -596,30 +591,48 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-ki-9Z5">
-                                <rect key="frame" x="52" y="100" width="496" height="464"/>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.47450980390000003" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="1 Player or 2 Player">
-                                        <attributes>
-                                            <color key="NSColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBN-25-Fg9">
+                                <rect key="frame" x="26" y="89" width="548" height="150"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gds-Ci-Abe"/>
+                                </constraints>
+                                <string key="text">Game: During the game the keyboard will remain active. The user can select any system keyboard to play with. Each keyboard tap represents a guess for a letter, if the letter is in the word it will replace the empty space else it will deduct one of the ten tries each game has. The stickman animation illustrates the remaining tries. After ten unsuccessful tries, the game is over -- stickman dies.</string>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="41" y="89" width="718" height="148"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIP-A4-3nN">
+                                <rect key="frame" x="26" y="425" width="548" height="150"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0zx-SN-dff"/>
+                                </constraints>
+                                <string key="text">1 Player: For this game a random word is selected for the user to guess. The word consists of 4 - 12 letters - all lowercase with no spaces or punctuation. 2 Player: This version allows for an input of any sort, no restrictions on character type, punctuation or spacing. Afterwards the first user hands the device to a second user to guess, and it becomes a normal game.</string>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="41" y="89" width="718" height="148"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="G0m-tj-XFG" firstAttribute="top" secondItem="rrj-ki-9Z5" secondAttribute="bottom" constant="36" id="BLI-gR-xT2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eBN-25-Fg9" secondAttribute="trailing" constant="10" id="A2y-ez-fWf"/>
+                            <constraint firstItem="eBN-25-Fg9" firstAttribute="leading" secondItem="Pwu-fL-Ysx" secondAttribute="leadingMargin" constant="10" id="Brn-lG-Mlk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4zP-fy-hJE" secondAttribute="trailing" constant="-16" id="DCc-nF-7uy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rrj-ki-9Z5" secondAttribute="trailing" constant="36" id="EKD-Qq-r4u"/>
                             <constraint firstItem="4zP-fy-hJE" firstAttribute="top" secondItem="4Fv-BT-Pht" secondAttribute="bottom" id="HdQ-37-HOf"/>
-                            <constraint firstItem="rrj-ki-9Z5" firstAttribute="top" secondItem="4zP-fy-hJE" secondAttribute="bottom" constant="36" id="KWj-h6-8pF"/>
-                            <constraint firstItem="rrj-ki-9Z5" firstAttribute="leading" secondItem="Pwu-fL-Ysx" secondAttribute="leadingMargin" constant="36" id="S2b-VJ-J0K"/>
+                            <constraint firstItem="G0m-tj-XFG" firstAttribute="top" secondItem="VIP-A4-3nN" secondAttribute="bottom" constant="25" id="HrG-Pl-jNu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VIP-A4-3nN" secondAttribute="trailing" constant="10" id="TuZ-qI-Gl0"/>
                             <constraint firstItem="4zP-fy-hJE" firstAttribute="leading" secondItem="Pwu-fL-Ysx" secondAttribute="leadingMargin" constant="-16" id="thh-6F-94r"/>
+                            <constraint firstItem="eBN-25-Fg9" firstAttribute="top" secondItem="4zP-fy-hJE" secondAttribute="bottom" constant="25" id="uiW-dC-VoZ"/>
+                            <constraint firstItem="VIP-A4-3nN" firstAttribute="leading" secondItem="Pwu-fL-Ysx" secondAttribute="leadingMargin" constant="10" id="xVH-Y1-yrH"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -636,7 +649,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UqQ-W6-FIm"/>
-        <segue reference="BcM-vf-6W8"/>
+        <segue reference="Jkk-Zv-SrC"/>
         <segue reference="Bsc-ng-fbe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
