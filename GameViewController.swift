@@ -43,6 +43,15 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "GameOver"
+        {
+            var destinationViewController: GameOverViewController = segue.destinationViewController as GameOverViewController
+            destinationViewController.mHangmanWord = self.mHangmanWord
+        }
+    }
+    
     func SetImage() -> (){
         
         self.CheckGameStatus()
@@ -58,7 +67,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     func HasGuessedCorrectly() -> ()
     {
-        self.performSegueWithIdentifier("HasGuessedCorrectly", sender: self)
+        self.performSegueWithIdentifier("GameOver", sender: self)
     }
     
     func CheckGameStatus() -> ()

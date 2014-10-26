@@ -43,7 +43,20 @@ class NewGameViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            // alert user word does not work
+            var alert: UIAlertController
+            
+            if (countElements(mHangmanWord.GetWord()) < 2)
+            {
+                alert = UIAlertController(title: "Word Length", message: "Word is too short, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            }
+            else
+            {
+                alert = UIAlertController(title: "Word Length", message: "Word is too long, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            }
+            
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
 
     }

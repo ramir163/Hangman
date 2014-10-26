@@ -160,13 +160,14 @@ class HangmanWord {
     
     func IsWordGood() -> Bool {
         
-        if true
+        if countElements(mWord) > 2 && countElements(mWord) < 15
         {
-            // check that is it only letters
-            // no spaces, numbers or punctuation
             return true
         }
-        //return false
+        else
+        {
+            return false
+        }
     }
     
     func Replace(char: String) -> ()
@@ -245,6 +246,11 @@ class HangmanWord {
         }
 
         return result
+    }
+    
+    func GetWord() -> String
+    {
+        return mWord
     }
     
 }
