@@ -11,7 +11,6 @@
 		6720649C19FB146100E9C517 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720649B19FB146100E9C517 /* HelpViewController.swift */; };
 		6734901919F5AE8400A574F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734901819F5AE8400A574F1 /* AppDelegate.swift */; };
 		6734901C19F5AE8400A574F1 /* Hangman.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6734901A19F5AE8400A574F1 /* Hangman.xcdatamodeld */; };
-		6734901E19F5AE8400A574F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734901D19F5AE8400A574F1 /* ViewController.swift */; };
 		6734902119F5AE8400A574F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6734901F19F5AE8400A574F1 /* Main.storyboard */; };
 		6734902619F5AE8400A574F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6734902419F5AE8400A574F1 /* LaunchScreen.xib */; };
 		6734903219F5AE8400A574F1 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734903119F5AE8400A574F1 /* HangmanTests.swift */; };
@@ -39,7 +38,6 @@
 		6734901719F5AE8400A574F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6734901819F5AE8400A574F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6734901B19F5AE8400A574F1 /* Hangman.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangman.xcdatamodel; sourceTree = "<group>"; };
-		6734901D19F5AE8400A574F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6734902019F5AE8400A574F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6734902519F5AE8400A574F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6734902B19F5AE8400A574F1 /* HangmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +96,6 @@
 				679A611D19F84D0100A261B6 /* NewGameViewController.swift */,
 				6768A75319F8A63C00BA4D07 /* GameViewController.swift */,
 				67D4E62219FD5B3900181C3E /* GameOverViewController.swift */,
-				6734901D19F5AE8400A574F1 /* ViewController.swift */,
 				6734901F19F5AE8400A574F1 /* Main.storyboard */,
 				6734902419F5AE8400A574F1 /* LaunchScreen.xib */,
 				6734903C19F6F6F400A574F1 /* Images.xcassets */,
@@ -235,7 +232,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6768A75219F8762200BA4D07 /* HangmanWord.swift in Sources */,
-				6734901E19F5AE8400A574F1 /* ViewController.swift in Sources */,
 				679A611E19F84D0100A261B6 /* NewGameViewController.swift in Sources */,
 				6720649C19FB146100E9C517 /* HelpViewController.swift in Sources */,
 				6720649A19FB144F00E9C517 /* AboutViewController.swift in Sources */,
@@ -365,14 +361,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Koszegi and Ramirez LLC (B3G6N2DA6A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Koszegi and Ramirez LLC (B3G6N2DA6A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hangman/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4d083977-3a7a-4c26-b1fc-66ee9cb119de";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
@@ -381,14 +377,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Koszegi and Ramirez LLC (B3G6N2DA6A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Koszegi and Ramirez LLC (B3G6N2DA6A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hangman/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4d083977-3a7a-4c26-b1fc-66ee9cb119de";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

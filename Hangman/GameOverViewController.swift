@@ -19,12 +19,19 @@ class GameOverViewController: UIViewController {
     let mWinningQuotesBank: [String] = ["Winning isn't everything.",
     "Winning is a habit, but so is losing.",
     "If winning isn't everything, why do they keep score?",
-    "Congrats, you won."]
+    "Congrats, you won.",
+    "Winning takes precedence over all.",
+    "The thrill isn't in the winning, it's the doing.",
+    "Winning is only half of it."]
     
     
     let mLosingQuotesBank: [String] = ["You learn more from losing than winning.",
     "Experience is the name we give our mistakes.",
-    "You lost, try again."]
+    "You lost, try again.",
+    "Losing is only half of it.",
+    "Losers live in the past",
+    "Losing is a habit, but so is winning.",
+    "There are more important things in life than winning."]
     
     override func viewDidLoad() {
         super.viewDidLoad()

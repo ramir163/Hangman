@@ -65,7 +65,7 @@
         <!--StartController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="NewGame" title="StartController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewGame" title="StartController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -574,8 +574,8 @@ During the game the keyboard will remain active. The user can select any system 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zJw-tR-n0a"/>
-        <segue reference="Ssi-G0-puA"/>
         <segue reference="ePf-7d-IyJ"/>
+        <segue reference="UqQ-W6-FIm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
