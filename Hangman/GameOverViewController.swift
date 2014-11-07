@@ -13,6 +13,7 @@ class GameOverViewController: UIViewController {
     @IBOutlet var messageLabel:UILabel?
     @IBOutlet var resultLabel:UILabel?
     @IBOutlet var navigationBar:UINavigationBar?
+    @IBOutlet var imageView:UIImageView?
     
     var mHangmanWord:HangmanWord = HangmanWord(word: "Won Game")
     
@@ -38,12 +39,17 @@ class GameOverViewController: UIViewController {
         
         if (self.mHangmanWord.HasGuessedWord())
         {
+            var newImage = UIImage(named: "Hangman Logo 240x240")
+            self.imageView!.image = newImage
+            
             self.messageLabel!.text = self.mWinningQuotesBank[ Int(arc4random())%self.mWinningQuotesBank.count]
             self.resultLabel!.text = "Congrats, word was: " + mHangmanWord.GetWord()
-
+            
         }
         else
         {
+            var newImage = UIImage(named: "Hangman Game 10")
+            self.imageView!.image = newImage
             self.messageLabel!.text = self.mLosingQuotesBank[ Int(arc4random())%self.mLosingQuotesBank.count]
             self.resultLabel!.text = "Game over, word was: " + mHangmanWord.GetWord()
         }

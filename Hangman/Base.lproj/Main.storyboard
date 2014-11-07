@@ -39,7 +39,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G97-eM-kDp">
                                 <rect key="frame" x="26" y="89" width="548" height="486"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">About: The inspiration for this game  came out of a 'hacking session' held at the Ruby MeetUp group in East Lansing, MI (meetup.com/Lansing-Ruby-Meetup-Group). I collaborated on building a Ruby script that allowed us to play hangman via the command line. Afterwads, to get aclimated with iOS 8, Swift and Xcode, I took on building the iOS application for the script we had. I designed the logos, game pictures and color palettes. Yes, the red is supposed to be blood. Thank listofrandomwords.com for the tough words in 1 Player games. For both positive and negative feedback or any bugs you may find, feel free to email me ramir163@msu.edu.</string>
+                                <string key="text">About: 
+
+The inspiration for this game  came out of a 'hacking session' held at the Ruby MeetUp group in East Lansing, MI (meetup.com/Lansing-Ruby-Meetup-Group). I collaborated on building a Ruby script that allowed us to play hangman via the command line. Afterwads, to get aclimated with iOS 8, Swift and Xcode, I took on building the iOS application for the script we had. I designed the logos, game pictures and color palettes. Yes, the red is supposed to be blood. Thank listofrandomwords.com for the tough words in 1 Player games. For both positive and negative feedback or any bugs you may find, feel free to email me ramir163@msu.edu.</string>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -123,7 +125,7 @@
                                     <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Welcome to Hangman" id="OxL-gX-hQT">
+                                    <navigationItem title="Simple Hangman" id="OxL-gX-hQT">
                                         <barButtonItem key="leftBarButtonItem" title="About" id="MMv-FR-DEa">
                                             <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -133,25 +135,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 180x180" translatesAutoresizingMaskIntoConstraints="NO" id="Ln4-CU-jeU">
-                                <rect key="frame" x="0.0" y="-180" width="180" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="DGK-kW-fkr"/>
-                                    <constraint firstAttribute="width" constant="180" id="HGG-DU-DTY"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DGK-kW-fkr"/>
-                                        <exclude reference="HGG-DU-DTY"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="DGK-kW-fkr"/>
-                                        <include reference="HGG-DU-DTY"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Hangman Logo 240x240" translatesAutoresizingMaskIntoConstraints="NO" id="oMq-gK-N6v">
                                 <rect key="frame" x="180" y="91" width="240" height="240"/>
                                 <constraints>
@@ -166,41 +149,18 @@
                             <constraint firstAttribute="centerX" secondItem="oMq-gK-N6v" secondAttribute="centerX" id="3J2-f2-oPN"/>
                             <constraint firstItem="EJK-0r-HCx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="76d-5j-gJR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EJK-0r-HCx" secondAttribute="trailing" constant="-16" id="7bh-Ie-vsB"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GWh-H7-GD6" secondAttribute="bottom" constant="50" id="Am2-AM-n0Y"/>
-                            <constraint firstItem="nXn-cw-9VY" firstAttribute="top" secondItem="Ln4-CU-jeU" secondAttribute="bottom" constant="17" id="E7M-RK-tS7">
-                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GWh-H7-GD6" secondAttribute="bottom" constant="50" id="Am2-AM-n0Y">
+                                <variation key="widthClass=compact" constant="15"/>
                             </constraint>
                             <constraint firstItem="EJK-0r-HCx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KYS-Vt-sRq"/>
-                            <constraint firstItem="Ln4-CU-jeU" firstAttribute="top" secondItem="EJK-0r-HCx" secondAttribute="bottom" constant="14" id="OLW-MO-x6R">
-                                <variation key="heightClass=regular-widthClass=regular" constant="16"/>
-                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="EJK-0r-HCx" secondAttribute="centerX" id="OcU-Wt-5Bk"/>
                             <constraint firstAttribute="centerX" secondItem="nXn-cw-9VY" secondAttribute="centerX" id="QnV-C8-JBD"/>
-                            <constraint firstAttribute="centerX" secondItem="Ln4-CU-jeU" secondAttribute="centerX" id="Zsw-Ju-ktv"/>
                             <constraint firstAttribute="centerX" secondItem="GWh-H7-GD6" secondAttribute="centerX" id="kGS-nK-QlZ"/>
-                            <constraint firstItem="GWh-H7-GD6" firstAttribute="top" secondItem="nXn-cw-9VY" secondAttribute="bottom" constant="25" id="seM-CK-e9J"/>
+                            <constraint firstItem="GWh-H7-GD6" firstAttribute="top" secondItem="nXn-cw-9VY" secondAttribute="bottom" constant="25" id="seM-CK-e9J">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="oMq-gK-N6v" firstAttribute="top" secondItem="EJK-0r-HCx" secondAttribute="bottom" constant="27" id="xuV-8s-XjQ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Ln4-CU-jeU"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="OLW-MO-x6R"/>
-                                <exclude reference="Zsw-Ju-ktv"/>
-                                <exclude reference="E7M-RK-tS7"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="Ln4-CU-jeU"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="OLW-MO-x6R"/>
-                                <include reference="Zsw-Ju-ktv"/>
-                                <include reference="E7M-RK-tS7"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -281,30 +241,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zzc-Cr-EbM" firstAttribute="top" secondItem="Y4o-qU-ydG" secondAttribute="bottom" constant="31" id="79T-kG-rUP">
-                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                            </constraint>
                             <constraint firstItem="RgZ-1C-b09" firstAttribute="top" secondItem="vGH-8G-8Xp" secondAttribute="bottom" id="Am8-rl-Uam"/>
                             <constraint firstItem="RgZ-1C-b09" firstAttribute="leading" secondItem="AFs-re-drZ" secondAttribute="leadingMargin" constant="-16" id="EbD-IG-jZm"/>
                             <constraint firstAttribute="centerX" secondItem="zzc-Cr-EbM" secondAttribute="centerX" id="P23-So-NtK"/>
-                            <constraint firstItem="xe9-9W-230" firstAttribute="top" secondItem="AFs-re-drZ" secondAttribute="topMargin" constant="100" id="VSc-TX-tjZ"/>
-                            <constraint firstItem="kEX-1G-YwC" firstAttribute="top" secondItem="zzc-Cr-EbM" secondAttribute="bottom" constant="50" id="b8b-lo-f7o"/>
+                            <constraint firstItem="xe9-9W-230" firstAttribute="top" secondItem="AFs-re-drZ" secondAttribute="topMargin" constant="100" id="VSc-TX-tjZ">
+                                <variation key="widthClass=compact" constant="85"/>
+                            </constraint>
+                            <constraint firstItem="kEX-1G-YwC" firstAttribute="top" secondItem="zzc-Cr-EbM" secondAttribute="bottom" constant="50" id="b8b-lo-f7o">
+                                <variation key="widthClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="Y4o-qU-ydG" secondAttribute="centerX" id="d4x-hZ-hAe"/>
                             <constraint firstAttribute="centerX" secondItem="xe9-9W-230" secondAttribute="centerX" id="dfj-qx-CbO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RgZ-1C-b09" secondAttribute="trailing" constant="-16" id="ntJ-so-mGz"/>
                             <constraint firstAttribute="centerY" secondItem="Y4o-qU-ydG" secondAttribute="centerY" id="pHl-ro-d18"/>
                             <constraint firstAttribute="centerX" secondItem="RgZ-1C-b09" secondAttribute="centerX" id="s24-QG-btk"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="79T-kG-rUP"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="79T-kG-rUP"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="textField" destination="Y4o-qU-ydG" id="1rD-5S-Y5f"/>
@@ -344,7 +295,7 @@
                                     <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Hangman" id="dZy-fi-kia">
+                                    <navigationItem title="Simple Hangman" id="dZy-fi-kia">
                                         <barButtonItem key="leftBarButtonItem" title="Help" id="wKe-Tb-Xwv">
                                             <color key="tintColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -369,7 +320,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.68235294120000001" green="0.098039215690000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="2eC-BL-M74" id="JgA-wf-U58"/>
                                 </connections>
@@ -379,8 +330,12 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S0G-Tf-FED" firstAttribute="leading" secondItem="P1G-uB-epL" secondAttribute="leadingMargin" constant="-16" id="7DH-R1-Viw"/>
-                            <constraint firstItem="AAo-xb-Flj" firstAttribute="top" secondItem="5DP-vR-Cei" secondAttribute="bottom" constant="20" id="K96-qX-ckP"/>
-                            <constraint firstItem="5DP-vR-Cei" firstAttribute="top" secondItem="S0G-Tf-FED" secondAttribute="bottom" constant="20" id="Pnx-36-YIF"/>
+                            <constraint firstItem="AAo-xb-Flj" firstAttribute="top" secondItem="5DP-vR-Cei" secondAttribute="bottom" constant="20" id="K96-qX-ckP">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="5DP-vR-Cei" firstAttribute="top" secondItem="S0G-Tf-FED" secondAttribute="bottom" constant="20" id="Pnx-36-YIF">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="S0G-Tf-FED" secondAttribute="trailing" constant="-16" id="QrD-0Z-2vE"/>
                             <constraint firstItem="S0G-Tf-FED" firstAttribute="top" secondItem="Acx-Wn-elp" secondAttribute="bottom" id="WK6-an-nt4"/>
                             <constraint firstAttribute="centerX" secondItem="S0G-Tf-FED" secondAttribute="centerX" id="lJh-P1-0YF"/>
@@ -477,19 +432,28 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="dN3-no-MKn" secondAttribute="centerX" id="0UW-yq-he3"/>
                             <constraint firstAttribute="centerX" secondItem="ibX-X9-3C7" secondAttribute="centerX" id="30P-kk-XYK"/>
-                            <constraint firstItem="0u4-IZ-oQS" firstAttribute="top" secondItem="dN3-no-MKn" secondAttribute="bottom" constant="50" id="Kvp-de-e6F"/>
-                            <constraint firstItem="dqN-QC-ytC" firstAttribute="top" secondItem="eCL-Ut-dDe" secondAttribute="bottom" constant="10" id="LQ6-po-Xsg"/>
+                            <constraint firstItem="0u4-IZ-oQS" firstAttribute="top" secondItem="dN3-no-MKn" secondAttribute="bottom" constant="50" id="Kvp-de-e6F">
+                                <variation key="widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="dqN-QC-ytC" firstAttribute="top" secondItem="eCL-Ut-dDe" secondAttribute="bottom" constant="10" id="LQ6-po-Xsg">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="3bs-0e-ohL" secondAttribute="centerX" id="M2f-tE-EVb"/>
                             <constraint firstItem="ibX-X9-3C7" firstAttribute="top" secondItem="0ve-RI-Oh9" secondAttribute="bottom" id="ROV-aR-kvS"/>
-                            <constraint firstAttribute="centerY" secondItem="eCL-Ut-dDe" secondAttribute="centerY" constant="15" id="U39-QD-p3v"/>
+                            <constraint firstAttribute="centerY" secondItem="eCL-Ut-dDe" secondAttribute="centerY" constant="15" id="U39-QD-p3v">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="ibX-X9-3C7" secondAttribute="trailing" constant="-16" id="YZn-wo-8gG"/>
                             <constraint firstAttribute="centerX" secondItem="dqN-QC-ytC" secondAttribute="centerX" id="aek-qd-gRs"/>
                             <constraint firstItem="ibX-X9-3C7" firstAttribute="leading" secondItem="1fg-vZ-RIl" secondAttribute="leadingMargin" constant="-16" id="cWl-z4-UtY"/>
                             <constraint firstAttribute="centerX" secondItem="eCL-Ut-dDe" secondAttribute="centerX" id="edT-Xc-NyM"/>
-                            <constraint firstItem="eCL-Ut-dDe" firstAttribute="top" secondItem="3bs-0e-ohL" secondAttribute="bottom" constant="10" id="gWy-8C-tvD"/>
+                            <constraint firstItem="eCL-Ut-dDe" firstAttribute="top" secondItem="3bs-0e-ohL" secondAttribute="bottom" constant="10" id="gWy-8C-tvD">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="eCL-Ut-dDe" id="gan-hM-DRT"/>
                         <outlet property="messageLabel" destination="3bs-0e-ohL" id="kbj-lO-mjc"/>
                         <outlet property="resultLabel" destination="dqN-QC-ytC" id="bwO-T6-VyS"/>
                     </connections>
@@ -545,9 +509,6 @@ During the game the keyboard will remain active. The user can select any system 
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="41" y="89" width="718" height="148"/>
-                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -564,12 +525,11 @@ During the game the keyboard will remain active. The user can select any system 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcn-oG-wah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282" y="-361"/>
+            <point key="canvasLocation" x="2281.5" y="-361.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="Hangman Logo 120x120" width="120" height="120"/>
-        <image name="Hangman Logo 180x180" width="180" height="180"/>
         <image name="Hangman Logo 240x240" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
